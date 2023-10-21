@@ -1,0 +1,15 @@
+body{
+    height: 100vh;
+}
+
+/* .container-fluid{
+    height: 100vh;
+} */
+
+img{
+    object-fit: cover;
+}
+
+.borders{
+    border: 1px solid rgba(124, 75, 27, 1);
+}
