@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eWallet Points Page</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Meterial Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div>
+      <!-- Header -->
+      <header
+        class="w-full mt-2 text-gray-700 bg-white shadow-sm body-font drop-shadow-md"
+      >
+        <div class="container mx-auto flex justify-between items-center p-1">
+          <a class="flex items-center font-medium text-gray-900 title-font">
+            <img
+              class="w-auto h-16 fill-gray-950 fill-current"
+              src="../../assets/logo.png"
+              alt=""
+            />
+          </a>
+
+          <form class="hidden md:block flex ml-5 md:pl-5 h-full">
+            <div class="relative">
+              <i
+                class="material-symbols-outlined absolute inset-y-0 left-2 flex items-center pr-3 text-gray-900"
+                >search</i
+              >
+              <input
+                type="text"
+                id="search"
+                class="bg-white rounded-full border border-yellow-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-transparent pl-9 py-2 w-[30vw]"
+                placeholder="Search"
+              />
+            </div>
+          </form>
+
+          <div class="flex items-center gap-2 md:gap-4 mr-2">
+            <div class="flex gap-1 ml-3">
+              <span class="material-symbols-outlined text-yellow-900"
+                >favorite</span
+              >
+              <a
+                href="#_"
+                class="hidden md:block font-medium hover:text-gray-900"
+                >Favorite</a
+              >
+            </div>
+
+            <div class="flex gap-1 ml-3">
+              <div class="relative">
+                <span class="material-symbols-outlined text-yellow-900"
+                  >shopping_cart</span
+                >
+                <div
+                  class="absolute top-[-6px] right-[-6px] text-white bg-yellow-900 rounded-full text-xs w-4 h-4 p-[1px] text-center"
+                >
+                  4
+                </div>
+              </div>
+
+              <a
+                href="#_"
+                class="hidden md:block font-medium hover:text-gray-900"
+                >Cart</a
+              >
+            </div>
+
+            <div class="flex gap-1 ml-3">
+              <span class="material-symbols-outlined text-yellow-900"
+                >account_circle</span
+              >
+              <a
+                href="#_"
+                class="hidden md:block font-medium hover:text-gray-900"
+                >Sign In</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <div class="flex">
+        <aside
+          class="hidden md:block w-1/6 bg-white min-h-screen p-2 lg:p-4 lg:pl-6"
+        >
+          <h1 class="text-lg font-bold text-yellow-900 text-center">
+            Manage My Account
+          </h1>
+          <div
+            class="flex md:flex-col lg:flex-row md:justify-start md:items-center gap-1 cursor-pointer mt-6"
+          >
+            <span class="material-symbols-outlined"> account_circle </span>
+            <a href="#_" class="font-medium hover:text-gray-900 text-center"
+              >My Profile</a
+            >
+          </div>
+          <div
+            class="flex md:flex-col lg:flex-row md:justify-start md:items-center gap-1 cursor-pointer mt-6"
+          >
+            <span class="material-symbols-outlined"> history </span>
+            <a href="#_" class="font-medium hover:text-gray-900 text-center"
+              >Order History</a
+            >
+          </div>
+          <div
+            class="flex md:flex-col lg:flex-row md:justify-start md:items-center gap-1 cursor-pointer mt-6"
+          >
+            <span class="material-symbols-outlined"> wallet </span>
+            <a href="#_" class="font-medium hover:text-gray-900 text-center"
+              >E- Wallet</a
+            >
+          </div>
+          <div
+            class="flex md:flex-col lg:flex-row md:justify-start md:items-center gap-1 cursor-pointer mt-6"
+          >
+            <span class="material-symbols-outlined"> border_color </span>
+            <a href="#_" class="font-medium hover:text-gray-900 text-center"
+              >Change Password</a
+            >
+          </div>
+          <div
+            class="flex md:flex-col lg:flex-row md:justify-start md:items-center gap-1 cursor-pointer mt-6 lg:text-right"
+          >
+            <span class="material-symbols-outlined">
+              circle_notifications
+            </span>
+            <a href="#_" class="font-medium hover:text-gray-900 text-center"
+              >Notification Center</a
+            >
+          </div>
+          <div
+            class="flex md:flex-col lg:flex-row md:justify-start md:items-center gap-1 cursor-pointer mt-6"
+          >
+            <span class="material-symbols-outlined"> logout </span>
+            <a href="#_" class="font-medium hover:text-gray-900 text-center"
+              >Logout</a
+            >
+          </div>
+        </aside>
+        <main class="bg-gray-100 w-full h-auto p-4">
+          <div class="container scroll-auto flex flex-col">
+            <h1 class="text-2xl font-bold my-3">eWallet Points</h1>
+            <div
+              class="grid grid-cols-1 gap-4 md:gap-2 md:grid-cols-2 lg:grid-cols-3"
+            >
+              <div class="mb-4">
+                <label
+                  for="name"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Select Top-up Account 
+                  <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value="Shaiju PV"
+                  class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                  placeholder="Shaiju PV"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="ewalletPoint"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Current E Wallet Points
+                  <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="number"
+                  id="ewalletPoint"
+                  name="ewalletPoint"
+                  value="256"
+                  class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Select Payment Type
+                  <span class="text-red-500">*</span>
+                </label>
+                <div class="relative inline-block w-full bg-white">
+                  <select
+                    name="gender"
+                    id="gender"
+                    class="w-full appearance-none px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500 bg-white"
+                  >
+                    <option value="" disabled selected>
+                      Select Payment Type
+                    </option>
+                    <option value="male">E Wallet</option>
+                    <option value="female">Cash</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M10.293 15.293a1 1 0 0 1-1.414 0L5.293 11.293a1 1 0 0 1 1.414-1.414L10 13.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+             <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Enter Top-Up Amount
+                  <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="number"
+                  id="topupamount"
+                  name="topupamount"
+                  class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                  placeholder="Enter Top-Up Amount"
+                />
+              </div>
+            </div>
+            <button
+              class="bg-yellow-900 hover:bg-white hover:text-yellow-900 hover:border hover:border-yellow-900 border border-white w-48 text-white font-nomal py-2 px-3 rounded-full my-5"
+            >
+              Add Point
+            </button>
+          </div>
+        </main>
+      </div>
+
+      <!-- Footer -->
+      <footer class="p-4 bg-yellow-900 sm:p-6 bottom-0 w-full">
+        <div class="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-4">
+          <div
+            class="mb-6 md:mb-0 flex flex-col flex-wrap justify-center items-center"
+          >
+            <img
+              src="../../assets/logo_white.png"
+              class="h-24"
+              alt="FlowBite Logo"
+            />
+            <div class="flex gap-2">
+              <a href="">
+                <img class="w-6" src="../../assets/facebook.png" alt="" />
+              </a>
+              <a href="">
+                <img class="w-6" src="../../assets/twitter.png" alt="" />
+              </a>
+              <a href="">
+                <img class="w-6" src="../../assets/instagram.png" alt="" />
+              </a>
+              <a href="">
+                <img class="w-6" src="../../assets/youtube.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="mb-6 text-lg font-semibold text-white">Get In Touch</h3>
+            <ul>
+              <li class="mb-4 flex items-center gap-1">
+                <span class="material-symbols-outlined text-white">
+                  location_on</span
+                >
+                <a href="#" target="_blank" class="text-white hover:underline"
+                  >Lorem ipsum dolor sit amet.</a
+                >
+              </li>
+              <li class="mb-4 flex items-center gap-1">
+                <span class="material-symbols-outlined text-white">call</span>
+                <a href="#" target="_blank" class="text-white hover:underline"
+                  >+91 7870780000</a
+                >
+              </li>
+              <li class="mb-4 flex items-center gap-1">
+                <span class="material-symbols-outlined text-white">mail</span>
+                <a href="#" target="_blank" class="text-white hover:underline"
+                  >Grand Centra@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-6 text-lg font-semibold text-white">Quick Links</h3>
+            <ul class="flex flex-col gap-2">
+              <li class="">
+                <a href="#" target="_blank" class="text-white hover:underline"
+                  >Your Account</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank" class="text-white hover:underline"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank" class="text-white hover:underline"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-6 text-lg font-semibold text-white">Newsletter</h3>
+            <span class="text-white capitalize"
+              >sign up for alert, our latest Updates.
+            </span>
+            <form class="flex mt-6 md:ml-auto">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-2 right-2 bg-yellow-900 rounded-full cursor-pointer"
+                >
+                  <i class="material-symbols-outlined items-center text-white"
+                    >arrow_forward</i
+                  >
+                </div>
+                <input
+                  type="text"
+                  id="search"
+                  class="bg-white rounded border border-yellow-900 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-transparent sm:pl-2 py-2"
+                  placeholder="Your Email Address"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="flex items-center justify-center mt-4">
+          <div class="flex flex-col items-center gap-2">
+            <span class="text-white text-xs sm:text-sm">
+              Copyright © 2023 Grand Central – Bakery & Kitchen. All right
+              reserved.</span
+            >
+            <sub class="text-white">Terms & Condition | Privacy Policy</sub>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
