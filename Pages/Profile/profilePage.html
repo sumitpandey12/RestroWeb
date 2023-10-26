@@ -90,9 +90,9 @@
       </header>
 
       <!-- Main -->
-      <div class="flex">
+      <div class="flex" id="mainDiv">
         <aside
-          class="hidden md:block w-1/6 bg-white min-h-screen p-2 lg:p-4 lg:pl-6"
+          class="hidden md:block w-1/5 bg-white min-h-screen p-2 lg:p-4 lg:pl-6"
         >
           <h1 class="text-lg font-bold text-yellow-900 text-center">
             Manage My Account
@@ -152,11 +152,11 @@
           <div class="container scroll-auto flex flex-col">
             <h1 class="text-2xl font-bold my-3">My Profile</h1>
             <button
+              id="addButton"
               class="self-end bg-yellow-900 hover:bg-white hover:text-yellow-900 hover:border hover:border-yellow-900 border border-white w-48 text-white font-nomal py-1 px-2 rounded-full m-5"
             >
               + Add New Profile
             </button>
-
 
             <!-- StudentCard -->
 
@@ -239,6 +239,290 @@
             </div>
           </div>
         </main>
+      </div>
+
+      <!-- PopUp -->
+
+      <div
+        id="popup"
+        class="fixed inset-0 flex items-center justify-center hidden"
+      >
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <div class="flex justify-between">
+            <p class="text-lg font-semibold my-4">Edit Profile</p>
+            <button id="closeButton" class="material-symbols-outlined">
+              close
+            </button>
+          </div>
+          <div class="grid grid-cols-4 gap-4 p-6">
+            <!-- Name -->
+            <div class="mb-4">
+              <label
+                for="name"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Name
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                placeholder="Enter your name"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="age"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Age
+                <span class="text-red-500">*</span>
+              </label>
+              <div class="relative inline-block w-full bg-white">
+                <select
+                  name="age"
+                  id="age"
+                  class="w-full appearance-none px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500 bg-white"
+                >
+                  <option value="" disabled selected>Select your Age</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M10.293 15.293a1 1 0 0 1-1.414 0L5.293 11.293a1 1 0 0 1 1.414-1.414L10 13.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label
+                for="gender"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Gender
+                <span class="text-red-500">*</span>
+              </label>
+              <div class="relative inline-block w-full bg-white">
+                <select
+                  name="gender"
+                  id="gender"
+                  class="w-full appearance-none px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500 bg-white"
+                >
+                  <option value="" disabled selected>Select your Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M10.293 15.293a1 1 0 0 1-1.414 0L5.293 11.293a1 1 0 0 1 1.414-1.414L10 13.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="qatarid"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Qatar Id
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                id="qatarid"
+                name="qatarid"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                placeholder="Enter your Qatar id"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Email
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                placeholder="Enter your Email"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="phone"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Phone
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                placeholder="Enter your Phone"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="tpd"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Allowed transactions / Day
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                id="tpd"
+                name="tpd"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                placeholder=""
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="asl"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Allowed Spent Limit
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                id="asl"
+                name="asl"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="TSPIN"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Transactional Security PIN
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                id="TSPIN"
+                name="TSPIN"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="MBSA"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Min Balance to Sent Alert
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                id="MBSA"
+                name="MBSA"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="NFCNo"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                E-Wallet NFC Serial No.
+                <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                id="NFCNo"
+                name="NFCNo"
+                class="w-full py-2 px-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="class"
+                class="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Class
+                <span class="text-red-500">*</span>
+              </label>
+              <div class="relative inline-block w-full bg-white">
+                <select
+                  name="class"
+                  id="class"
+                  class="w-full appearance-none px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500 bg-white"
+                >
+                  <option value="" disabled selected>Select your Class</option>
+                  <option value="high">High School</option>
+                  <option value="middle">Middle School</option>
+                  <option value="other">Other</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M10.293 15.293a1 1 0 0 1-1.414 0L5.293 11.293a1 1 0 0 1 1.414-1.414L10 13.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4 justify-center items-center">
+            <button
+              class="bg-white hover:bg-yellow-900 hover:text-white border border-yellow-900 hover:border hover:border-white text-yellow-900 font-bold py-2 px-10 rounded-full"
+            >
+              Delete
+            </button>
+            <button
+              class="bg-yellow-900 hover:bg-white hover:text-yellow-900 hover:border hover:border-yellow-900 border border-white text-white font-bold py-2 px-10 rounded-full"
+            >
+              Save
+            </button>
+          </div>
+        </div>
       </div>
 
       <!-- Footer -->
@@ -357,6 +641,24 @@
 
       toggleButton.addEventListener("click", () => {
         expandedDetails.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Popup Function -->
+    <script>
+      const addButton = document.querySelector("#addButton");
+      const popup = document.querySelector("#popup");
+      const closeButton = document.querySelector("#closeButton");
+      const mainDiv = document.querySelector("#mainDiv");
+
+      addButton.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+        mainDiv.classList.add("blur");
+      });
+
+      closeButton.addEventListener("click", () => {
+        popup.classList.add("hidden");
+        mainDiv.classList.remove("blur");
       });
     </script>
   </body>
