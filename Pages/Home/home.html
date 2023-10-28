@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
   </head>
-  <body>
+  <body class="m-0 p-0">
     <div>
       <!-- Header -->
       <header
@@ -90,7 +90,7 @@
       </header>
 
       <!-- Sidebar -->
-      <div class="flex">
+      <div class="flex" id="mainDiv">
         <aside
           class="hidden md:block w-1/6 bg-white min-h-screen p-2 lg:p-4 lg:pl-6"
         >
@@ -199,12 +199,202 @@
           </div>
         </aside>
         <main class="bg-gray-100 w-full h-auto p-4">
+          <div class="md:hidden block mt-2">
+            <div class="relative">
+              <input
+                type="text"
+                id="search"
+                name="search"
+                class="w-full py-2 pl-10 pr-3 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+                placeholder="Search Items"
+              />
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <span class="material-symbols-outlined">
+                  search
+
+                  <path
+                    stroke="currentColor"
+                    stroke-width="2"
+                    d="M21 21l-5-5m2-10a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="md:hidden block flex w-full items-center justify-center my-2">
+            <div class="relative group w-full">
+              <button
+                id="dropdown-button"
+                class="inline-flex justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500"
+              >
+                <span class="mr-2">Select Categories</span>
+                <span class="material-symbols-outlined"> expand_more </span>
+              </button>
+              <div
+                id="dropdown-menu"
+                class="hidden absolute w-full right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-4 divide-y"
+              >
+                <div class="flex flex-col justify-center gap-4 p-2">
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/001-food 1.png"
+                      alt=""
+                    />
+                    <a href="#_" class="font-medium hover:text-gray-900"
+                      >Arabic Dish</a
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/002-bakery 1.png"
+                      alt=""
+                    />
+                    <a href="#_" class="font-medium hover:text-gray-900"
+                      >Bakery</a
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img class="w-6 h-6" src="../../assets/cake 1.png" alt="" />
+                    <a href="#_" class="font-medium hover:text-gray-900"
+                      >Cakes</a
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/004-meal 1.png"
+                      alt=""
+                    />
+                    <a href="#_" class="font-medium hover:text-gray-900"
+                      >Diet Meals</a
+                    >
+                  </div>
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/006-frozen-goods 1.png"
+                      alt=""
+                    />
+                    <a
+                      href="#_"
+                      class="font-medium hover:text-gray-900 text-center"
+                      >Frozen Bakery</a
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/003-cupcake 1.png"
+                      alt=""
+                    />
+                    <a
+                      href="#_"
+                      class="font-medium hover:text-gray-900 text-center"
+                      >Pastries</a
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/007-salad 1.png"
+                      alt=""
+                    />
+                    <a
+                      href="#_"
+                      class="font-medium hover:text-gray-900 text-center"
+                      >Salads</a
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/008-sandwich 1.png"
+                      alt=""
+                    />
+                    <a
+                      href="#_"
+                      class="font-medium hover:text-gray-900 text-center"
+                      >Sandwiches</a
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/009-cloche 1.png"
+                      alt=""
+                    />
+                    <a
+                      href="#_"
+                      class="font-medium hover:text-gray-900 text-center"
+                      >Special Packs</a
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/010-menu 1.png"
+                      alt=""
+                    />
+                    <a
+                      href="#_"
+                      class="font-medium hover:text-gray-900 text-center"
+                      >Subscription</a
+                    >
+                  </div>
+
+                  <div
+                    class="flex items-center justify-start gap-2 cursor-pointer"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="../../assets/pastry 1.png"
+                      alt=""
+                    />
+                    <a
+                      href="#_"
+                      class="font-medium hover:text-gray-900 text-center"
+                      >Viennoiserie Pastries</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div
             class="container scroll-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-flow-row gap-4"
           >
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -217,13 +407,14 @@
               <button
                 class="bg-yellow-900 text-white rounded-full py-1"
                 type="button"
+                id="addButton"
               >
                 Add to cart
               </button>
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -243,7 +434,7 @@
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -262,7 +453,7 @@
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -281,7 +472,7 @@
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -300,7 +491,7 @@
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -319,7 +510,7 @@
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -338,7 +529,7 @@
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -357,7 +548,7 @@
             </div>
             <div class="contaner flex flex-col bg-white rounded p-4 gap-2">
               <img
-                class="rounded-md w-full h-60 object-cover"
+                class="rounded-md w-full h-40 md:h-60 object-cover"
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
                 alt=""
               />
@@ -376,6 +567,38 @@
             </div>
           </div>
         </main>
+      </div>
+
+      <!-- PopUp -->
+      <div
+        id="popup"
+        class="fixed inset-0 flex items-center justify-center hidden"
+      >
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <div class="flex justify-center items-center">
+            <img class="w-24 h-24" src="../../assets/logo.png" alt="" />
+          </div>
+          <p class="text-xl text-yellow-900 font-semibold my-4">
+            Not Signed in or Registered
+          </p>
+          <span class="line-clamp-2"
+            >You are not signed in or Registered in GCBK online shop. Please
+            Click on the <br />
+            Next button to redirect to sign in or register page. Close to close
+            the window</span
+          >
+          <div class="flex gap-4 mt-6">
+            <div class="text-yellow-900 hover:text-yellow-600 py-2 px-10">
+              Next
+            </div>
+            <div
+              id="closeButton"
+              class="text-yellow-900 hover:text-yellow-600 py-2 px-10"
+            >
+              Close
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Footer -->
@@ -486,5 +709,56 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      const addButton = document.querySelector("#addButton");
+      const popup = document.querySelector("#popup");
+      const closeButton = document.querySelector("#closeButton");
+      const mainDiv = document.querySelector("#mainDiv");
+
+      addButton.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+        mainDiv.classList.add("brightness-50");
+      });
+
+      closeButton.addEventListener("click", () => {
+        popup.classList.add("hidden");
+        mainDiv.classList.remove("brightness-50");
+      });
+
+      // JavaScript to toggle the dropdown
+      const dropdownButton = document.getElementById("dropdown-button");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      const searchInput = document.getElementById("search-input");
+      let isOpen = false; // Set to true to open the dropdown by default
+
+      // Function to toggle the dropdown state
+      function toggleDropdown() {
+        isOpen = !isOpen;
+        dropdownMenu.classList.toggle("hidden", !isOpen);
+      }
+
+      // Set initial state
+      toggleDropdown();
+
+      dropdownButton.addEventListener("click", () => {
+        toggleDropdown();
+      });
+
+      // Add event listener to filter items based on input
+      searchInput.addEventListener("input", () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const items = dropdownMenu.querySelectorAll("a");
+
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(searchTerm)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
   </body>
 </html>

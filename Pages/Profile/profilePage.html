@@ -76,7 +76,9 @@
             </div>
 
             <div class="flex gap-1 ml-3">
-              <span class="material-symbols-outlined text-yellow-900"
+              <span
+                id="userToggle"
+                class="material-symbols-outlined text-yellow-900"
                 >account_circle</span
               >
               <a
@@ -90,9 +92,10 @@
       </header>
 
       <!-- Main -->
-      <div class="flex" id="mainDiv">
+      <div class="flex bg-gray-100 pb-12" id="mainDiv">
         <aside
-          class="hidden md:block w-1/5 bg-white min-h-screen p-2 lg:p-4 lg:pl-6"
+          id="asideMenu"
+          class="hidden md:block w-full md:w-1/5 bg-white min-h-screen p-2 lg:p-4 lg:pl-6 sm:absolute md:relative"
         >
           <h1 class="text-lg font-bold text-yellow-900 text-center">
             Manage My Account
@@ -148,12 +151,12 @@
             >
           </div>
         </aside>
-        <main class="bg-gray-100 w-full h-auto p-4">
+        <main id="mainContent" class="w-full h-auto p-2 md:p-4">
           <div class="container scroll-auto flex flex-col">
-            <h1 class="text-2xl font-bold my-3">My Profile</h1>
+            <h1 class="text-2xl font-bold my-2 md:my-3">My Profile</h1>
             <button
               id="addButton"
-              class="self-end bg-yellow-900 hover:bg-white hover:text-yellow-900 hover:border hover:border-yellow-900 border border-white w-48 text-white font-nomal py-1 px-2 rounded-full m-5"
+              class="self-end bg-yellow-900 hover:bg-white hover:text-yellow-900 hover:border hover:border-yellow-900 border border-white w-36 md:w-48 text-sm md:text-base text-white font-nomal py-1 px-2 rounded-full mb-2 md:m-5"
             >
               + Add New Profile
             </button>
@@ -161,13 +164,15 @@
             <!-- StudentCard -->
 
             <div class="bg-white w-full rounded-lg shadow-md flex gap-4">
-              <div class="container-md bg-yellow-900 w-5 rounded-r-full"></div>
+              <div
+                class="hidden md:block container-md bg-yellow-900 w-5 rounded-r-full"
+              ></div>
               <div class="flex flex-col gap-2 w-full p-4">
                 <div class="flex justify-between">
-                  <h2 class="text-xl text-black font-bold">
+                  <h2 class="text-lg md:text-xl text-black font-bold">
                     Shaiju PV ( Male)
                   </h2>
-                  <div class="flex gap-3">
+                  <div class="flex md:gap-3">
                     <span
                       class="material-symbols-outlined cursor-pointer hover:text-yellow-900 p-2"
                     >
@@ -182,7 +187,9 @@
                   </div>
                 </div>
                 <div class="flex flex-col">
-                  <div class="grid grid-cols-3 gap-6">
+                  <div
+                    class="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm md:text-normal"
+                  >
                     <div class="flex gap-2">
                       <p class="text-gray-700 font-bold">Age:</p>
                       <p class="text-gray-500">18</p>
@@ -191,14 +198,16 @@
                       <p class="text-gray-700 font-bold">Class -</p>
                       <p class="text-gray-500">High school</p>
                     </div>
-                    <div class="flex gap-2">
+                    <div class="hidden md:block flex gap-2">
                       <p class="text-gray-700 font-bold">NFC Serial No. -</p>
                       <p class="text-gray-500">3142338</p>
                     </div>
                   </div>
                 </div>
                 <div class="hidden mt-4 flex flex-col" id="expandedDetails">
-                  <div class="grid grid-cols-3 gap-6">
+                  <div
+                    class="grid grid-cols-2 md:grid-cols-3 text-sm md:text-normal gap-6"
+                  >
                     <div class="flex gap-2">
                       <p class="text-gray-700 font-bold">
                         Transactional Security PIN -
@@ -650,6 +659,9 @@
       const popup = document.querySelector("#popup");
       const closeButton = document.querySelector("#closeButton");
       const mainDiv = document.querySelector("#mainDiv");
+      const userToggle = document.querySelector("#userToggle");
+      const asideMenu = document.querySelector("#asideMenu");
+      const mainContent = document.querySelector("#mainContent");
 
       addButton.addEventListener("click", () => {
         popup.classList.remove("hidden");
@@ -659,6 +671,27 @@
       closeButton.addEventListener("click", () => {
         popup.classList.add("hidden");
         mainDiv.classList.remove("brightness-50");
+      });
+
+      userToggle.addEventListener("click", () => {
+        asideMenu.classList.toggle("hidden");
+        mainContent.classList.toggle("hidden");
+
+        // Get the current state of the asideMenu visibility
+        const isOpen = !asideMenu.classList.contains("hidden");
+
+        // Change the icon based on the asideMenu visibility
+        if (isOpen) {
+          // If the aside menu is open, show the close icon
+          userToggle.innerHTML =
+            '<span class="material-icons-outlined">close</span>';
+          userToggle.setAttribute("aria-expanded", "true");
+        } else {
+          // If the aside menu is closed, show the menu icon
+          userToggle.innerHTML =
+            '<span class="material-icons-outlined">account_circle</span>';
+          userToggle.setAttribute("aria-expanded", "false");
+        }
       });
     </script>
   </body>
